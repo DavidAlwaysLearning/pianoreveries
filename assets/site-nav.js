@@ -76,6 +76,80 @@
   menu.hidden = true;
   menu.appendChild(list);
 
+  /* Newest first. Titles, years, and domains come from each album repo. */
+  var albums = [
+    { href: "https://lackadaisicalperfection.com/", title: "Lackadaisical Perfection", file: "lackadaisical-perfection" },
+    { href: "https://pianoreveries.com/", title: "Piano Reveries and Phantasies", file: "piano-reveries" },
+    { href: "https://smittenwiththemuses.com/", title: "Smitten with the Muses", file: "smitten-with-the-muses" },
+    { href: "https://whereintheworldisdiane.com/", title: "Where In The World Is Diane", file: "where-in-the-world-is-diane" },
+    { href: "https://cleancalmpiano.com/", title: "Clean Calm Piano", file: "clean-calm-piano" },
+    { href: "https://tantalizingproof.com/", title: "Tantalizing Proof", file: "tantalizing-proof" },
+    { href: "https://pianoincolors.com/", title: "Piano In Colors", file: "piano-in-colors" },
+    { href: "https://melodicsubtlety.com/", title: "Melodic Subtlety – Solo Piano", file: "melodic-subtlety" }
+  ];
+
+  function isThisAlbum(href) {
+    var host = new URL(href).hostname.replace(/^www\./, "");
+    var here = (location.hostname || "").replace(/^www\./, "");
+    if (here === "localhost" || here === "127.0.0.1" || here === "") here = "pianoreveries.com";
+    return host === here;
+  }
+
+  var albumIndex = document.createElement("div");
+  albumIndex.className = "album-index";
+
+  var albumLabel = document.createElement("p");
+  albumLabel.className = "album-index-label";
+  albumLabel.id = "album-index-label";
+  albumLabel.textContent = "Albums";
+  albumIndex.appendChild(albumLabel);
+
+  var albumList = document.createElement("ul");
+  albumList.className = "album-list";
+  albumList.setAttribute("role", "list");
+  albumList.setAttribute("aria-labelledby", "album-index-label");
+
+  albums.forEach(function (album) {
+    var item = document.createElement("li");
+    var img = document.createElement("img");
+    img.src = "/assets/albums/" + album.file + ".jpg";
+    img.srcset = "/assets/albums/" + album.file + ".jpg 1x, /assets/albums/" + album.file + "@2x.jpg 2x";
+    img.width = 48;
+    img.height = 48;
+    img.alt = "";
+    img.decoding = "async";
+
+    var copy = document.createElement("span");
+    copy.className = "album-copy";
+    var name = document.createElement("span");
+    name.className = "album-title";
+    name.textContent = album.title;
+    copy.appendChild(name);
+
+    var row;
+    if (isThisAlbum(album.href)) {
+      row = document.createElement("span");
+      row.className = "is-here";
+      row.setAttribute("aria-current", "page");
+      var hereLabel = document.createElement("span");
+      hereLabel.className = "here-label";
+      hereLabel.textContent = "You’re here";
+      copy.appendChild(hereLabel);
+    } else {
+      row = document.createElement("a");
+      row.href = album.href;
+      row.target = "_blank";
+      row.rel = "noopener";
+    }
+    row.appendChild(img);
+    row.appendChild(copy);
+    item.appendChild(row);
+    albumList.appendChild(item);
+  });
+
+  albumIndex.appendChild(albumList);
+  menu.appendChild(albumIndex);
+
   document.body.appendChild(button);
   document.body.appendChild(menu);
 

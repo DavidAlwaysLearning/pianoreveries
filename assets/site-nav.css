@@ -146,3 +146,93 @@
     transition: none;
   }
 }
+
+.album-index {
+  border-top: 1px solid var(--nav-line);
+  margin: 0;
+  padding: 0.75rem 0 0.35rem;
+}
+
+.album-index-label {
+  margin: 0;
+  padding: 0 0.95rem 0.3rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8aa4b8;
+}
+
+.site-menu .album-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.35rem;
+}
+
+.site-menu .album-list a,
+.site-menu .album-list .is-here {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.38rem 0.9rem;
+  color: var(--nav-ink);
+  font-family: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.site-menu .album-list .album-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.site-menu .album-list img {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.site-menu .album-list a:hover {
+  color: var(--nav-glow);
+}
+
+.site-menu .album-list .is-here {
+  color: #8aa4b8;
+  cursor: default;
+}
+
+.site-menu .album-list .here-label {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #8aa4b8;
+}
+
+@media (max-width: 760px) {
+  .site-menu .album-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem 0.55rem;
+    padding: 0.15rem 0.85rem 0.75rem;
+  }
+
+  .site-menu .album-list a,
+  .site-menu .album-list .is-here {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 0;
+    font-size: 1.05rem;
+  }
+}
