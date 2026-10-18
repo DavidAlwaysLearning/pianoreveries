@@ -31,7 +31,11 @@
  "image": "https://pianoreveries.com/assets/piano-reveries-cover.jpg",
  "byArtist": {
   "@type": "Person",
-  "name": "David Rivera"
+  "name": "David Rivera",
+  "sameAs": [
+   "https://open.spotify.com/artist/5qoC4NXvjfV3cylbXALzV3",
+   "https://music.apple.com/us/artist/david-rivera/1325691064"
+  ]
  },
  "datePublished": "2015",
  "numTracks": 22,
@@ -42,6 +46,145 @@
  "sameAs": [
   "https://music.apple.com/us/album/piano-reveries-and-phantasies/1034879736",
   "https://open.spotify.com/album/3Yo4sk9QOR7ToSO01Wn72U"
+ ],
+ "description": "A leaf on a journey, a meditating mantis, first light. Twenty-two small nature pieces. Leaf On a Journey Through Time is the one that already found a few people.",
+ "recordLabel": {
+  "@type": "Organization",
+  "name": "Subtlety Media, LLC"
+ },
+ "track": [
+  {
+   "@type": "MusicRecording",
+   "position": 1,
+   "name": "Leaf On a Journey Through Time",
+   "duration": "PT3M57S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 2,
+   "name": "A Pondering Spider Weaves",
+   "duration": "PT5M13S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 3,
+   "name": "Song of the Grasshopper",
+   "duration": "PT3M11S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 4,
+   "name": "Beetle in Slow Motion",
+   "duration": "PT3M0S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 5,
+   "name": "Meditating Mantis",
+   "duration": "PT3M46S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 6,
+   "name": "Flowers Sneezing",
+   "duration": "PT2M37S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 7,
+   "name": "Dance of the Ant",
+   "duration": "PT3M47S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 8,
+   "name": "Twisting Trail",
+   "duration": "PT3M16S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 9,
+   "name": "Delicious Sunset",
+   "duration": "PT3M4S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 10,
+   "name": "Om Provisation",
+   "duration": "PT7M58S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 11,
+   "name": "Enchanted Forest",
+   "duration": "PT3M28S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 12,
+   "name": "First Light",
+   "duration": "PT4M22S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 13,
+   "name": "Thoughts of the Flying Dandelion",
+   "duration": "PT3M23S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 14,
+   "name": "Sixteenhundred Eighty Five",
+   "duration": "PT1M54S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 15,
+   "name": "Whispering Petals Stir",
+   "duration": "PT3M42S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 16,
+   "name": "Graceful Hummingbird",
+   "duration": "PT3M1S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 17,
+   "name": "Lake of Golden Wisdom",
+   "duration": "PT2M1S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 18,
+   "name": "Little Waterfall Tickled Pink",
+   "duration": "PT2M40S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 19,
+   "name": "Mellifluous Swan",
+   "duration": "PT2M46S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 20,
+   "name": "Scrumptious Morning Strawberry",
+   "duration": "PT2M3S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 21,
+   "name": "Hop of the Happy Lizard",
+   "duration": "PT1M54S"
+  },
+  {
+   "@type": "MusicRecording",
+   "position": 22,
+   "name": "Sensitive Butterfly Effect",
+   "duration": "PT4M30S"
+  }
  ]
 }
 </script>
@@ -178,6 +321,7 @@
   .catalog li { padding: 5px 0; }
   .catalog a { color: var(--glow); text-decoration: none; }
   .catalog a:hover { text-decoration: underline; }
+  .catalog .desc { color: var(--mute); }
   .new-work a { color: var(--glow); text-decoration: none; }
   .new-work a:hover { text-decoration: underline; }
 </style>
@@ -195,7 +339,7 @@
   <p class="album-note">This week’s piece is <i>Flowers Sneezing</i>. A small favorite that has been sitting quietly here since 2015.</p>
 
   <div class="actions">
-    <a class="apple-badge" href="https://music.apple.com/us/album/piano-reveries-and-phantasies/1034879736" target="_blank" rel="noopener"><img src="listen-on-apple-music.svg" alt="Listen on Apple Music" height="40"></a>
+    <a class="apple-badge" href="https://music.apple.com/us/album/piano-reveries-and-phantasies/1034879736?ls=1" target="_blank" rel="noopener"><img src="listen-on-apple-music.svg" alt="Listen on Apple Music" height="40"></a>
     <a class="btn" href="https://open.spotify.com/album/3Yo4sk9QOR7ToSO01Wn72U" target="_blank" rel="noopener">Listen on Spotify</a>
   </div>
 
@@ -238,12 +382,13 @@
   <hr class="rule">
   <p class="label">The other albums</p>
   <ul class="catalog">
-    <li><a href="https://melodicsubtlety.com/">Melodic Subtlety – Solo Piano (2006)</a></li>
-    <li><a href="https://pianoincolors.com/">Piano In Colors (2007)</a></li>
-    <li><a href="https://tantalizingproof.com/">Tantalizing Proof (2009)</a></li>
-    <li><a href="https://cleancalmpiano.com/">Clean Calm Piano (2010)</a></li>
-    <li><a href="https://whereintheworldisdiane.com/">Where In The World Is Diane (2012)</a></li>
-    <li><a href="https://smittenwiththemuses.com/">Smitten with the Muses (2014)</a></li>
+    <li><a href="https://melodicsubtlety.com/">Melodic Subtlety – Solo Piano (2006)</a><span class="desc"> · minimalist piano</span></li>
+    <li><a href="https://pianoincolors.com/">Piano In Colors (2007)</a><span class="desc"> · expressive neoclassical</span></li>
+    <li><a href="https://tantalizingproof.com/">Tantalizing Proof (2009)</a><span class="desc"> · quiet, insistent piano</span></li>
+    <li><a href="https://cleancalmpiano.com/">Clean Calm Piano (2010)</a><span class="desc"> · intimate piano</span></li>
+    <li><a href="https://whereintheworldisdiane.com/">Where In The World Is Diane (2012)</a><span class="desc"> · travel-inspired piano</span></li>
+    <li><a href="https://smittenwiththemuses.com/">Smitten with the Muses (2014)</a><span class="desc"> · beguiling piano</span></li>
+    <li><a href="https://lackadaisicalperfection.com/">Lackadaisical Perfection (2027)</a><span class="desc"> · neoclassical piano</span></li>
   </ul>
 
 
@@ -257,19 +402,20 @@
   <footer>
     © 2015 David Rivera
     <br>
-    <a href="https://music.apple.com/us/artist/david-rivera/1325691064" target="_blank" rel="noopener">Apple Music</a>
+    <a href="https://music.apple.com/us/artist/david-rivera/1325691064?ls=1" target="_blank" rel="noopener">Apple Music</a>
     ·
-    <a href="https://open.spotify.com/artist/5qoC4NXvjfV3cylbXALzV3" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://open.spotify.com/artist/5qoC4NXvjfV3cylbXALzV3" target="_blank" rel="noopener">Spotify</a><br>
+    Piano-led, with touches of electronica and accompaniment.
     <br>
-    <a href="https://lackadaisicalperfection.com/subscribe/">Subscribe to Melodic Subtlety</a>
+    <a href="https://lackadaisicalperfection.com/subscribe/">Subscribe to Melodic Subtlety</a> for new releases and piano scores.
     <br>
     <a href="https://lackadaisicalperfection.com/scores/">Free piano sheet music with chords by David Rivera</a>
     <br>
     <div class="contact">
-      Contact:
+      Contact &amp; Sync Licensing:
       <div class="who">
-        Mr. Miles Music (catalog for David Rivera)<br>
-        <a href="mailto:Mr.Miles.Music@subtletymedia.com">Mr.Miles.Music@subtletymedia.com</a>
+        Mr. Miles Music (one-stop master &amp; publishing catalog for David Rivera · Subtlety Media · ASCAP)<br>
+        <a href="mailto:mr.miles.music@subtletymedia.com">mr.miles.music@subtletymedia.com</a>
       </div>
     </div>
   </footer>
