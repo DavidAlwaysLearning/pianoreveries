@@ -75,12 +75,13 @@
   }, true);
 })();
 
-/* Site menu. Add a destination by appending one entry. The open menu lists every other destination. Scores is the shared library. Subscribe confirmation and thank-you pages are not destinations. */
+/* Site menu. Same destinations on every page: About, Scores, Subscribe, then the eight albums.
+   Subscribe confirmation is not a destination. The only page-specific mark is "You're here" on this album. */
 (function () {
   var pages = [
-    { href: "/", label: "Album" },
+    { href: "https://lackadaisicalperfection.com/about/", label: "About", blank: true },
     { href: "https://lackadaisicalperfection.com/scores/", label: "Scores", blank: true },
-    { href: "https://lackadaisicalperfection.com/about/", label: "About", blank: true }
+    { href: "https://lackadaisicalperfection.com/subscribe/", label: "Subscribe", blank: true }
   ];
 
   function normalize(path) {
@@ -163,7 +164,7 @@
     { href: "https://cleancalmpiano.com/", title: "Clean Calm Piano", file: "clean-calm-piano" },
     { href: "https://tantalizingproof.com/", title: "Tantalizing Proof", file: "tantalizing-proof" },
     { href: "https://pianoincolors.com/", title: "Piano In Colors", file: "piano-in-colors" },
-    { href: "https://melodicsubtlety.com/", title: "Melodic Subtlety – Solo Piano", file: "melodic-subtlety" }
+    { href: "https://melodicsubtlety.com/", title: "Melodic Subtlety", file: "melodic-subtlety" }
   ];
 
   function isThisAlbum(href) {
